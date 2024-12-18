@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login-style.css">
+</head>
+<body>
+    <!-- Login Container -->
+    <div class="login-container">
+        <!-- Cancel Button -->
+        <button class="cancel-btn" onclick="location.href='../index.html'">&times;</button>
+
+        <!-- Title -->
+        <h1 class="login-title">Login</h1>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-button active" id="phone-tab" data-tab="phone">Use Phone Number</button>
+            <button class="tab-button" id="email-tab" data-tab="email">Use Email Address</button>
+        </div>
+
+        <!-- Tab Contents -->
+        <div class="tab-content active" id="phone-content">
+            <div class="phone-input">
+                <span class="country-code">
+                    <img src="Flag_of_India.png" alt="India Flag">
+                    +91
+                </span>
+                <input type="text" id="phone-number" placeholder="81234 56789">
+            </div>
+            <button class="continue-btn" id="phone-continue-btn">Continue &rarr;</button>
+        </div>
+
+        <div class="tab-content" id="email-content">
+            <label for="email-address">Email Address:</label>
+            <input type="email" id="email-address" placeholder="Enter your email address">
+            <button class="continue-btn" id="email-continue-btn">Continue &rarr;</button>
+        </div>
+
+        <!-- Register Link -->
+        <div class="register-link">
+            <p>Not a member yet? <a href="register.html">Register Now</a></p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const phoneTab = document.getElementById("phone-tab");
+            const emailTab = document.getElementById("email-tab");
+            const phoneContent = document.getElementById("phone-content");
+            const emailContent = document.getElementById("email-content");
+
+            const phoneInput = document.getElementById("phone-number");
+            const emailInput = document.getElementById("email-address");
+
+            const phoneContinueBtn = document.getElementById("phone-continue-btn");
+            const emailContinueBtn = document.getElementById("email-continue-btn");
+
+            // Function to switch tabs
+            function switchTab(activeTab, inactiveTab, activeContent, inactiveContent) {
+                activeTab.classList.add("active");
+                inactiveTab.classList.remove("active");
+                activeContent.classList.add("active");
+                inactiveContent.classList.remove("active");
+            }
+
+            phoneTab.addEventListener("click", () => {
+                switchTab(phoneTab, emailTab, phoneContent, emailContent);
+            });
+
+            emailTab.addEventListener("click", () => {
+                switchTab(emailTab, phoneTab, emailContent, phoneContent);
+            });
+
+            // Validate and submit for phone login
+            phoneContinueBtn.addEventListener("click", function (event) {
+                event.preventDefault(); // Prevent form submission to validate
+
+                // Phone validation (must be 10 digits)
+                const phoneRegex = /^[0-9]{10}$/;
+                if (!phoneRegex.test(phoneInput.value.trim())) {
+                    alert("Please enter a valid 10-digit phone number.");
+                    return;
+                }
+
+                alert("Phone number login successful!");
+                // Proceed with further actions (e.g., submit form or send data to server)
+            });
+
+            // Validate and submit for email login
+            emailContinueBtn.addEventListener("click", function (event) {
+                event.preventDefault(); // Prevent form submission to validate
+
+                // Email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(emailInput.value.trim())) {
+                    alert("Please enter a valid email address.");
+                    return;
+                }
+
+                alert("Email login successful!");
+                // Proceed with further actions (e.g., submit form or send data to server)
+            });
+        });
+    </script>
+</body>
+</html>

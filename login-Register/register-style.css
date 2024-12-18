@@ -1,0 +1,158 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+}
+
+/* Login and Register Container */
+.login-container, .register-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    position: relative;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Titles */
+.login-title, .register-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Input Labels */
+.input-label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Phone Input Styling */
+.phone-input {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 5px;
+    background-color: #f5f5f5;
+}
+
+.phone-input .country-code {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    color: #2b8a3e;
+    font-weight: bold;
+}
+
+.phone-input img {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.phone-input input {
+    border: none;
+    background: transparent;
+    flex: 1;
+    outline: none;
+    padding: 5px 10px;
+    font-size: 1rem;
+}
+
+/* Standard Input Styling */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    background-color: #f5f5f5;
+    font-size: 1rem;
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+/* Buttons */
+.continue-btn {
+    background-color: #2b8a3e;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+}
+
+.continue-btn:hover {
+    background-color: #207832;
+    transform: scale(1.02);
+}
+
+.cancel-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #ff4d4d;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: color 0.3s ease;
+}
+
+.cancel-btn:hover {
+    color: #d63031;
+}
+
+/* Login Link */
+.login-link {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.login-link a {
+    text-decoration: none;
+    color: #2b8a3e;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

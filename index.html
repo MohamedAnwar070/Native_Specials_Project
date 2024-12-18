@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">GRAMIYUM</div>
+        <div class="nav-links">
+            <input type="text" class="search-bar" placeholder="Search for products...">
+            <div class="contact-number">📞 +91 95001 29121</div>
+            <div class="account-links">
+                <a href="#">Login</a> / <a href="#">Register</a>
+            </div>
+            <div class="cart-details">
+                <span class="cart-icon">🛒</span>
+                <span>0 items - ₹0.00</span>
+            </div>
+        </div>
+        <div class="menu-icon" id="menu-toggle">&#9776;</div>
+    </nav>
+
+    <!-- Home Page Content -->
+    <div class="home-page">
+        <div class="card-container">
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Product">
+                <p>Product 1</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Product">
+                <p>Product 2</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/100" alt="Product">
+                <p>Product 3</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <div class="menu-sidebar" id="menu-sidebar">
+        <span class="close-btn" id="close-sidebar">&times;</span>
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-button active" id="categories-tab">Categories</button>
+            <button class="tab-button" id="profile-tab">Profile</button>
+        </div>
+        
+        <!-- Content -->
+        <div class="menu-content">
+            <!-- Categories Content -->
+            <div class="tab-content active" id="categories-content">
+                <ul>
+                    <li>Cold Pressed Oils</li>
+                    <li>Rice</li>
+                    <li>Flour</li>
+                    <li>Crunchy Snacks</li>
+                    <li>Combo Boxes</li>
+                </ul>
+            </div>
+
+            <!-- Profile Content -->
+            <div class="tab-content" id="profile-content">
+                <ul>
+                    <li>My Account</li>
+                    <li>My Wallet</li>
+                    <li>Contact Us</li>
+                    <li>Logout</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Sidebar Footer -->
+        <div class="sidebar-footer">
+            <a href="#">WhatsApp</a>
+            <a href="#">Twitter</a>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>

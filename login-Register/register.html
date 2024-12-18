@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="register-style.css">
+</head>
+<body>
+    <div class="register-container">
+        <!-- Cancel Button -->
+        <button class="cancel-btn" onclick="location.href='../index.html'">&times;</button>
+
+        <!-- Register Header -->
+        <h2 class="register-title">Register</h2>
+
+        <!-- Registration Form -->
+        <form id="register-form">
+            <!-- Phone Input -->
+            <label for="register-phone" class="input-label">Phone Number</label>
+            <div class="phone-input">
+                <span class="country-code"><img src="Flag_of_India.png" alt="India Flag">+91</span>
+                <input type="text" id="register-phone" placeholder="81234 56789" required>
+            </div>
+
+            <!-- Email Input -->
+            <label for="register-email" class="input-label">Email Address</label>
+            <input type="email" id="register-email" placeholder="Email Address" required>
+
+            <!-- Name Input -->
+            <label for="register-name" class="input-label">First Name</label>
+            <input type="text" id="register-name" placeholder="First Name" required>
+
+            <!-- Password Input -->
+            <label for="register-password" class="input-label">Password</label>
+            <input type="password" id="register-password" placeholder="Password" required>
+
+            <!-- Submit Button -->
+            <button type="submit" class="continue-btn">Continue →</button>
+        </form>
+
+        <!-- Login Link -->
+        <div class="login-link">
+            Already a member? <a href="login.html"><b>Login Now</b></a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("register-form");
+            const phoneInput = document.getElementById("register-phone");
+            const emailInput = document.getElementById("register-email");
+            const nameInput = document.getElementById("register-name");
+            const passwordInput = document.getElementById("register-password");
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent form submission to handle validation
+
+                // Validate phone number
+                if (phoneInput.value.trim().length !== 10) {
+                    alert("Please enter a valid 10-digit phone number.");
+                    return;
+                }
+
+                // Validate email
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(emailInput.value)) {
+                    alert("Please enter a valid email address.");
+                    return;
+                }
+
+                // Validate password (basic check)
+                if (passwordInput.value.length < 6) {
+                    alert("Password must be at least 6 characters long.");
+                    return;
+                }
+
+                // If all validations pass
+                alert("Form submitted successfully!");
+                // Here, you can proceed with form submission, e.g., sending data to the server.
+            });
+        });
+    </script>
+</body>
+</html>
