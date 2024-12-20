@@ -111,3 +111,50 @@
       }
       updateCarousel(currentIndex); // Adjust carousel position
   });
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    // Add event listeners to all dropdown toggles
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+  
+    dropdownToggles.forEach((toggle) => {
+      const dropdownMenu = toggle.nextElementSibling;
+      const dropdownIcon = toggle.querySelector('.dropdown-icon');
+  
+      // Toggle dropdown on click
+      toggle.addEventListener('click', function (e) {
+        e.preventDefault();
+  
+        // Close other open dropdowns
+        document.querySelectorAll('.dropdown-menu').forEach((menu) => {
+          if (menu !== dropdownMenu) {
+            menu.classList.remove('show');
+          }
+        });
+  
+        // Toggle this dropdown's visibility
+        dropdownMenu.classList.toggle('show');
+  
+        // Update icon
+        if (dropdownMenu.classList.contains('show')) {
+          dropdownIcon.innerHTML = '&#x25B2;'; // Up arrow ▲
+        } else {
+          dropdownIcon.innerHTML = '&#x25BC;'; // Down arrow ▼
+        }
+      });
+    });
+  
+    // Close dropdown if clicking outside
+    document.addEventListener('click', function (e) {
+      dropdownToggles.forEach((toggle) => {
+        const dropdownMenu = toggle.nextElementSibling;
+        const dropdownIcon = toggle.querySelector('.dropdown-icon');
+  
+        if (!toggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
+          dropdownMenu.classList.remove('show');
+          dropdownIcon.innerHTML = '&#x25BC;'; // Reset to down arrow ▼
+        }
+      });
+    });
+  });
+  

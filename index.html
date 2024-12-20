@@ -17,27 +17,80 @@
             <i class="fas fa-search icon" id="search-toggle"></i>
             <i class="fas fa-bars icon" id="menu-toggle"></i>
         </div>
-            <!-- Search Bar big screen-->
-    <div class="nav-links">
-        <div class="search-container">
-            <input type="text" class="search-bar" placeholder="Search for products...">
-            
-            <button class="search-btn"> <i class="fas fa-search"></i></button>
-        </div>
-        <div class="contact-number"><i class="fas fa-phone-alt"></i> +91 95001 29121</div>
-        <div class="account-links"><i class="fas fa-user-circle"></i>
-            <a href="login-Register/login.html">Login</a> / <a href="login-Register/register.html">Register</a>
-        </div>
-        <!-- cart details -->
-        <div class="cart-details">
-            <div class="cart-container">
-                <span class="cart-icon"><i class="fas fa-shopping-cart"></i></span>
-                <span>0 items - ₹0.00</span>
+        <!-- Search Bar big screen-->
+        <div class="nav-links">
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="Search for products...">
+                <button class="search-btn"> <i class="fas fa-search"></i></button>
+            </div>
+            <div class="contact-number"><i class="fas fa-phone-alt"></i> +91 95001 29121</div>
+            <div class="account-links"><i class="fas fa-user-circle"></i>
+                <a href="login-Register/login.html">Login</a> / <a href="login-Register/register.html">Register</a>
+            </div>
+            <!-- cart details -->
+            <div class="cart-details">
+                <div class="cart-container">
+                    <span class="cart-icon"><i class="fas fa-shopping-cart"></i></span>
+                    <span>0 items - ₹0.00</span>
+                </div>
             </div>
         </div>
-    </div>
     </nav>
-        <!-- Search Bar small screen-->
+
+  <!-- Second Navbar -->
+<nav class="second-navbar">
+    <ul class="nav-menu">
+      <li><a href="#">Home</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">Categories <span class="dropdown-icon">&#x25BC;</span></a>
+        <div class="dropdown-menu">
+          <div class="dropdown-column">
+            <a href="#">Rice</a>
+            <a href="#">Ghee</a>
+            <a href="#">Pulses and Millets</a>
+            <a href="#">Dried Nuts & Seeds</a>
+            <a href="#">Flour</a>
+          </div>
+          <div class="dropdown-column">
+            <a href="#">Podi Varieties</a>
+            <a href="#">Masala and Spices</a>
+            <a href="#">Pickles</a>
+            <a href="#">Vathal / Vadam</a>
+            <a href="#">Soup Powder</a>
+          </div>
+          <div class="dropdown-column">
+            <a href="#">Home Care</a>
+            <a href="#">Personal Care</a>
+            <a href="#">Natural Cookware</a>
+            <a href="#">Cold Pressed Oil</a>
+          </div>
+          <div class="dropdown-column">
+            <a href="#">Sweeteners</a>
+            <a href="#">Crunchy Snacks</a>
+            <a href="#">Noodles – Millet</a>
+            <a href="#">Speciality</a>
+            <a href="#">Combo Boxes</a>
+          </div>
+        </div>
+      </li>
+      
+      </li>
+      <li><a href="#">Cold Pressed Oils</a></li>
+      <li><a href="#">Combo Box</a></li>
+      <li class="recent-product dropdown">
+        <a href="#" class="dropdown-toggle">
+          Recent Viewed Product <span class="dropdown-icon">&#x25BC;</span>
+        </a>
+        <ul class="dropdown-menu right-dropdown">
+          <li><a href="#">Product 1</a></li>
+          <li><a href="#">Product 2</a></li>
+          <li><a href="#">Product 3</a></li>
+        </ul>
+      </li>
+      
+  </nav>
+  
+    <!-- Search Bar small screen-->
     <div class="search-bar-container" id="search-bar">
         <input type="text" placeholder="Search For..." id="search-input">
         <i class="fas fa-times cancel-btn" id="cancel-search"></i>
@@ -78,15 +131,14 @@
         </div>
     </div>
 
-     <!-- Home Page Content -->
-
-     <div class="carousel-container">
+    <!-- Home Page Content -->
+    <div class="carousel-container">
         <img src="Beans.jpg" alt="Banner" class="banner-image">
         <br>
         <div class="carousel-header">
             <h2>Featured Categories <a href="#">Shop all</a></h2>
-          </div>
-      
+        </div>
+
         <div class="carousel">
             <div class="carousel-item">
                 <img src="https://via.placeholder.com/156x156" alt="Item 1">
@@ -108,34 +160,6 @@
                 <img src="https://via.placeholder.com/300x300" alt="Item 5">
                 <p>Fruits</p>
             </div>
-            <div class="carousel-item">
-                <img src="https://via.placeholder.com/300x300" alt="Item 3">
-                <p>Natural Oil</p>
-            </div>
-            <div class="carousel-item">
-                <img src="https://via.placeholder.com/300x300" alt="Item 4">
-                <p>Spices</p>
-            </div>
-            <div class="carousel-item">
-                <img src="https://via.placeholder.com/300x300" alt="Item 5">
-                <p>Fruits</p>
-            </div>
-            <div class="carousel-item">
-                <img src="https://via.placeholder.com/300x300" alt="Item 4">
-                <p>Spices</p>
-            </div>
-            <div class="carousel-item">
-                <img src="https://via.placeholder.com/300x300" alt="Item 5">
-                <p>Fruits</p>
-            </div>
-            <div class="carousel-item">
-                <img src="https://via.placeholder.com/300x300" alt="Item 4">
-                <p>Spices</p>
-            </div>
-            <div class="carousel-item">
-                <img src="https://via.placeholder.com/300x300" alt="Item 5">
-                <p>Fruits</p>
-            </div>
         </div>
         <!-- Navigation Controls -->
         <button class="carousel-control prev">❮</button>
@@ -143,12 +167,10 @@
 
         <button class="view-all">
             <i class="fas fa-shopping-cart"></i>View All
-          </button>
-    </div>  
-    <!-- script  -->
+        </button>
+    </div>
 
-    <Script src="script.js">
-
-    </Script>
+    <!-- Script -->
+    <script src="script.js"></script>
 </body>
 </html>
