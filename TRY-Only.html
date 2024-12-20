@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout - GRAMIYUM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: #2b8a3e;
+            color: white;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-icons {
+            display: none; /* Hidden by default for larger screens */
+        }
+
+        .nav-icons .icon {
+            font-size: 1.5rem;
+            cursor: pointer;
+            margin-left: 15px;
+        }
+
+        /* search bar for big screen */
+        .nav-links {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.search-bar {
+    padding: 5px;
+    border-radius: 20px;
+    border: none;
+    margin-right: 10px;
+    font-size: 1rem;
+    width: 180px;
+    display: flex;
+    transition: all 0.5s ease-in-out;
+}
+
+.search-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.search-btn:hover {
+    color: #ffcc00;
+}
+
+        /* cart */
+        .contact-number, .account-links, .cart-details {
+    margin-right: 15px;
+}
+
+.account-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.account-links a:hover {
+    text-decoration: underline;
+}
+
+.cart-details {
+    display: flex;
+    align-items: center;
+}
+
+.cart-container {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.cart-container span {
+    color: #2b8a3e;
+    margin-left: 5px;
+}
+
+
+        /* Search Bar */
+        .search-bar-container {
+            display: none;
+            flex-direction: row;
+            align-items: center;
+            position: fixed;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            padding: 10px 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+        }
+
+        .search-bar-container.active {
+            display: flex;
+            animation: slideDown 0.3s ease-in-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .search-bar-container input {
+            flex: 1;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search-bar-container .cancel-btn {
+            font-size: 1.5rem;
+            cursor: pointer;
+            margin-left: 10px;
+            color: #333;
+        }
+
+        /* Sidebar */
+        /* Full-width banner image */
+.banner-image {
+    margin-top: 50px;
+    object-fit: cover;
+    width: 100%;
+    height: 452px;
+    top: 40px;
+    margin-bottom: 20px;
+}
+
+/* View All button */
+.view-all {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px auto;
+}
+  
+.view-all:hover {
+    transform: scale(1.1);
+    background: darkgreen;
+}
+
+/* Header styles */
+.carousel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+  
+.carousel-header h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0;
+}
+  
+.carousel-header a {
+    font-size: 1rem;
+    color: green;
+    text-decoration: none;
+}
+  
+.cart-icon {
+    width: 24px;
+    height: 24px;
+}
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+/* Carousel */
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carousel-item {
+    flex: 1 0 calc(100% / 3); /* Three items per slide */
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10px;
+}
+
+.carousel-item img {
+    width: 156px;
+    height: 156px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.carousel-item:hover img {
+    transform: scale(1.01);
+}
+
+/* Navigation Controls */
+.carousel-control {
+    position: absolute;
+    top: 80%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1;
+    font-size: 1.5rem;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+/* Sidebar Menu */
+.menu-sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Hidden initially on the right */
+    width: 300px;
+    height: 100%;
+    background-color: #2b8a3e;
+    color: #fff;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.menu-sidebar.open {
+    right: 0; /* Show when toggled */
+    background-color: #207832;
+}
+
+/* Close Button */
+.close-btn {
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #fff;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.tab-button.active {
+    border-bottom: 2px solid #fff;
+}
+
+.menu-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-content ul {
+    list-style: none;
+}
+
+.tab-content li {
+    margin: 10px 0;
+    transition: transform 0.3s ease;
+}
+
+.tab-content li:hover {
+    transform: translateX(10px);
+}
+
+/* Sidebar Footer */
+.sidebar-footer {
+    text-align: center;
+    padding: 15px;
+    background: #1f6e2e;
+}
+
+.sidebar-footer a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.sidebar-footer a:hover {
+    color: #ffcc00;
+}
+
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-icons {
+                display: flex; /* Show search and menu icons on small screens */
+            }
+      
+        .nav-links, .contact-number, .account-links, .cart-details {
+        display: none;
+    }
+}
+
+        @media (min-width: 769px) {
+            .nav-icons {
+                display: none; /* Hide search bar and sidebar on larger screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">GRAMIYUM</div>
+        <div class="nav-icons">
+            <i class="fas fa-search icon" id="search-toggle"></i>
+            <i class="fas fa-bars icon" id="menu-toggle"></i>
+        </div>
+            <!-- Search Bar big screen-->
+    <div class="nav-links">
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search for products...">
+            
+            <button class="search-btn"> <i class="fas fa-search"></i></button>
+        </div>
+        <div class="contact-number"><i class="fas fa-phone-alt"></i> +91 95001 29121</div>
+        <div class="account-links"><i class="fas fa-user-circle"></i>
+            <a href="login-Register/login.html">Login</a> / <a href="login-Register/register.html">Register</a>
+        </div>
+        <!-- cart details -->
+        <div class="cart-details">
+            <div class="cart-container">
+                <span class="cart-icon"><i class="fas fa-shopping-cart"></i></span>
+                <span>0 items - ₹0.00</span>
+            </div>
+        </div>
+    </div>
+   
+    </nav>
+
+
+        <!-- Search Bar small screen-->
+    <div class="search-bar-container" id="search-bar">
+        <input type="text" placeholder="Search For..." id="search-input">
+        <i class="fas fa-times cancel-btn" id="cancel-search"></i>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="menu-sidebar" id="menu-sidebar">
+        <span class="close-btn" id="close-sidebar">&times;</span>
+        <!-- Sidebar Tabs -->
+        <div class="tabs">
+            <button class="tab-button active" id="categories-tab">Categories</button>
+            <button class="tab-button" id="profile-tab">Profile</button>
+        </div>
+        <!-- Sidebar Content -->
+        <div class="menu-content">
+            <div class="tab-content active" id="categories-content">
+                <ul>
+                    <li>Cold Pressed Oils</li>
+                    <li>Rice</li>
+                    <li>Flour</li>
+                    <li>Crunchy Snacks</li>
+                    <li>Combo Boxes</li>
+                </ul>
+            </div>
+            <div class="tab-content" id="profile-content">
+                <ul>
+                    <li>My Account</li>
+                    <li>My Wallet</li>
+                    <li>Contact Us</li>
+                    <li>Logout</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Sidebar Footer -->
+        <div class="sidebar-footer">
+            <a href="#">WhatsApp</a>
+            <a href="#">Twitter</a>
+        </div>
+    </div>
+
+     <!-- Home Page Content -->
+
+     <div class="carousel-container">
+        <img src="Beans.jpg" alt="Banner" class="banner-image">
+        <br>
+        <div class="carousel-header">
+            <h2>Featured Categories <a href="#">Shop all</a></h2>
+          </div>
+      
+        <div class="carousel">
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/156x156" alt="Item 1">
+                <p>Organic Honey</p>
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/300x300" alt="Item 2">
+                <p>Herbal Products</p>
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/300x300" alt="Item 3">
+                <p>Natural Oil</p>
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/300x300" alt="Item 4">
+                <p>Spices</p>
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/300x300" alt="Item 5">
+                <p>Fruits</p>
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/300x300" alt="Item 3">
+                <p>Natural Oil</p>
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/300x300" alt="Item 4">
+                <p>Spices</p>
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/300x300" alt="Item 5">
+                <p>Fruits</p>
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/300x300" alt="Item 4">
+                <p>Spices</p>
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/300x300" alt="Item 5">
+                <p>Fruits</p>
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/300x300" alt="Item 4">
+                <p>Spices</p>
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/300x300" alt="Item 5">
+                <p>Fruits</p>
+            </div>
+        </div>
+        <!-- Navigation Controls -->
+        <button class="carousel-control prev">❮</button>
+        <button class="carousel-control next">❯</button>
+
+        <button class="view-all">
+            <i class="fas fa-shopping-cart"></i>View All
+          </button>
+    </div>
+
+    <!-- Script -->
+    <script>
+        // Search Bar Toggle
+        const searchToggle = document.getElementById("search-toggle");
+        const searchBar = document.getElementById("search-bar");
+        const cancelSearch = document.getElementById("cancel-search");
+    
+        searchToggle.addEventListener("click", () => {
+            searchBar.classList.toggle("active");
+        });
+    
+        cancelSearch.addEventListener("click", () => {
+            searchBar.classList.remove("active");
+        });
+    
+        // Sidebar Toggle
+        const menuToggle = document.getElementById("menu-toggle");
+        const menuSidebar = document.getElementById("menu-sidebar");
+        const closeSidebar = document.getElementById("close-sidebar");
+    
+        menuToggle.addEventListener("click", () => {
+            menuSidebar.classList.toggle("open");
+        });
+    
+        closeSidebar.addEventListener("click", () => {
+            menuSidebar.classList.remove("open");
+        });
+    
+        // Tab Switching
+        const categoriesTab = document.getElementById("categories-tab");
+        const profileTab = document.getElementById("profile-tab");
+        const categoriesContent = document.getElementById("categories-content");
+        const profileContent = document.getElementById("profile-content");
+    
+        function switchTab(tabName) {
+            if (tabName === "categories") {
+                categoriesTab.classList.add("active");
+                profileTab.classList.remove("active");
+                categoriesContent.classList.add("active");
+                profileContent.classList.remove("active");
+            } else {
+                profileTab.classList.add("active");
+                categoriesTab.classList.remove("active");
+                profileContent.classList.add("active");
+                categoriesContent.classList.remove("active");
+            }
+        }
+    
+        categoriesTab.addEventListener("click", () => switchTab("categories"));
+        profileTab.addEventListener("click", () => switchTab("profile"));
+    
+        // Carousel - For Small Screen (1 Item Per Slide)
+        const carousel = document.querySelector(".carousel");
+        const items = document.querySelectorAll(".carousel-item");
+        const prevButton = document.querySelector(".carousel-control.prev");
+        const nextButton = document.querySelector(".carousel-control.next");
+    
+        let currentIndex = 0;
+        let itemsPerSlide = 3; // Default to 3 for larger screens
+        const totalSlides = Math.ceil(items.length / itemsPerSlide);
+    
+        // Update the carousel position
+        function updateCarousel(index) {
+            const slideWidth = 100 / itemsPerSlide; // Slide width percentage
+            carousel.style.transform = `translateX(-${index * slideWidth}%)`;
+        }
+    
+        // Go to the next slide
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateCarousel(currentIndex);
+        }
+    
+        // Go to the previous slide
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateCarousel(currentIndex);
+        }
+    
+        // Auto-slide functionality
+        let autoSlideInterval;
+    
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(nextSlide, 3000); // 3-second interval
+        }
+    
+        function stopAutoSlide() {
+            clearInterval(autoSlideInterval);
+        }
+    
+        // Event listeners for manual navigation
+        nextButton.addEventListener("click", () => {
+            stopAutoSlide();
+            nextSlide();
+            startAutoSlide();
+        });
+    
+        prevButton.addEventListener("click", () => {
+            stopAutoSlide();
+            prevSlide();
+            startAutoSlide();
+        });
+    
+        // Start auto-slide on page load
+        startAutoSlide();
+    
+        // Make the carousel responsive
+        window.addEventListener("resize", () => {
+            if (window.innerWidth <= 768) {
+                itemsPerSlide = 1; // Show 1 item per slide on small screens
+            } else {
+                itemsPerSlide = 3; // Show 3 items per slide on larger screens
+            }
+            updateCarousel(currentIndex); // Adjust carousel position
+        });
+    </script>    
+</body>
+</html>

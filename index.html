@@ -3,57 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Layout</title>
+    <title>NATIVE-SPECIALS</title>
+     <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- css integration -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="logo">GRAMIYUM</div>
-        <div class="nav-links">
+        <div class="logo">NATIVE-SPECIALS</div>
+        <div class="nav-icons">
+            <i class="fas fa-search icon" id="search-toggle"></i>
+            <i class="fas fa-bars icon" id="menu-toggle"></i>
+        </div>
+            <!-- Search Bar big screen-->
+    <div class="nav-links">
+        <div class="search-container">
             <input type="text" class="search-bar" placeholder="Search for products...">
-            <div class="contact-number">📞 +91 95001 29121</div>
-            <div class="account-links">
-                <a href="#">Login</a> / <a href="#">Register</a>
-            </div>
-            <div class="cart-details">
-                <span class="cart-icon">🛒</span>
+            
+            <button class="search-btn"> <i class="fas fa-search"></i></button>
+        </div>
+        <div class="contact-number"><i class="fas fa-phone-alt"></i> +91 95001 29121</div>
+        <div class="account-links"><i class="fas fa-user-circle"></i>
+            <a href="login-Register/login.html">Login</a> / <a href="login-Register/register.html">Register</a>
+        </div>
+        <!-- cart details -->
+        <div class="cart-details">
+            <div class="cart-container">
+                <span class="cart-icon"><i class="fas fa-shopping-cart"></i></span>
                 <span>0 items - ₹0.00</span>
             </div>
         </div>
-        <div class="menu-icon" id="menu-toggle">&#9776;</div>
+    </div>
     </nav>
-
-    <!-- Home Page Content -->
-    <div class="home-page">
-        <div class="card-container">
-            <div class="card">
-                <img src="https://via.placeholder.com/100" alt="Product">
-                <p>Product 1</p>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/100" alt="Product">
-                <p>Product 2</p>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/100" alt="Product">
-                <p>Product 3</p>
-            </div>
-        </div>
+        <!-- Search Bar small screen-->
+    <div class="search-bar-container" id="search-bar">
+        <input type="text" placeholder="Search For..." id="search-input">
+        <i class="fas fa-times cancel-btn" id="cancel-search"></i>
     </div>
 
-    <!-- Sidebar Menu -->
+    <!-- Sidebar -->
     <div class="menu-sidebar" id="menu-sidebar">
         <span class="close-btn" id="close-sidebar">&times;</span>
-        <!-- Tabs -->
+        <!-- Sidebar Tabs -->
         <div class="tabs">
             <button class="tab-button active" id="categories-tab">Categories</button>
             <button class="tab-button" id="profile-tab">Profile</button>
         </div>
-        
-        <!-- Content -->
+        <!-- Sidebar Content -->
         <div class="menu-content">
-            <!-- Categories Content -->
             <div class="tab-content active" id="categories-content">
                 <ul>
                     <li>Cold Pressed Oils</li>
@@ -63,8 +62,6 @@
                     <li>Combo Boxes</li>
                 </ul>
             </div>
-
-            <!-- Profile Content -->
             <div class="tab-content" id="profile-content">
                 <ul>
                     <li>My Account</li>
@@ -74,7 +71,6 @@
                 </ul>
             </div>
         </div>
-
         <!-- Sidebar Footer -->
         <div class="sidebar-footer">
             <a href="#">WhatsApp</a>
@@ -82,7 +78,77 @@
         </div>
     </div>
 
-    <!-- Script -->
-    <script src="script.js"></script>
+     <!-- Home Page Content -->
+
+     <div class="carousel-container">
+        <img src="Beans.jpg" alt="Banner" class="banner-image">
+        <br>
+        <div class="carousel-header">
+            <h2>Featured Categories <a href="#">Shop all</a></h2>
+          </div>
+      
+        <div class="carousel">
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/156x156" alt="Item 1">
+                <p>Organic Honey</p>
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/300x300" alt="Item 2">
+                <p>Herbal Products</p>
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/300x300" alt="Item 3">
+                <p>Natural Oil</p>
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/300x300" alt="Item 4">
+                <p>Spices</p>
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/300x300" alt="Item 5">
+                <p>Fruits</p>
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/300x300" alt="Item 3">
+                <p>Natural Oil</p>
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/300x300" alt="Item 4">
+                <p>Spices</p>
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/300x300" alt="Item 5">
+                <p>Fruits</p>
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/300x300" alt="Item 4">
+                <p>Spices</p>
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/300x300" alt="Item 5">
+                <p>Fruits</p>
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/300x300" alt="Item 4">
+                <p>Spices</p>
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/300x300" alt="Item 5">
+                <p>Fruits</p>
+            </div>
+        </div>
+        <!-- Navigation Controls -->
+        <button class="carousel-control prev">❮</button>
+        <button class="carousel-control next">❯</button>
+
+        <button class="view-all">
+            <i class="fas fa-shopping-cart"></i>View All
+          </button>
+    </div>  
+    <!-- script  -->
+
+    <Script src="script.js">
+
+    </Script>
 </body>
 </html>

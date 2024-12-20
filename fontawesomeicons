@@ -1,0 +1,40 @@
+<!-- here some fontawesome icons -->
+
+<!-- Include Font Awesome CDN for Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<nav id="tbay-mobile-menu-navbar" class="menu navbar navbar-offcanvas navbar-static">
+    <div id="main-mobile-menu-mmenu" class="menu-mobile-category-container">
+        <ul id="main-mobile-menu-mmenu-wrapper" class="menu" data-id="mobile-category">
+            <li id="menu-item-345315" class="menu-item"><a href="https://gramiyum.in/product-category/cane-sugar-jaggery/"><i class="fas fa-sugar"></i> Cane Sugar / Jaggery</a></li>
+            <li id="menu-item-345316" class="menu-item"><a href="https://gramiyum.in/product-category/cold-pressed-oil/"><i class="fas fa-oil-can"></i> Cold Pressed Oil</a></li>
+            <li id="menu-item-345317" class="menu-item"><a href="https://gramiyum.in/product-category/buy-natural-combo-foods-online/"><i class="fas fa-boxes"></i> Combo Boxes</a></li>
+            <li id="menu-item-345318" class="menu-item"><a href="https://gramiyum.in/product-category/snacks/"><i class="fas fa-cookie"></i> Crunchy Snacks</a></li>
+            <li id="menu-item-345319" class="menu-item"><a href="https://gramiyum.in/product-category/daily-essentials/"><i class="fas fa-check-circle"></i> Daily Essentials</a></li>
+            <li id="menu-item-345320" class="menu-item"><a href="https://gramiyum.in/product-category/dried-nuts-and-seeds/"><i class="fas fa-seedling"></i> Dried Nuts & Seeds</a></li>
+            <li id="menu-item-345321" class="menu-item"><a href="https://gramiyum.in/product-category/cow-ghee/"><i class="fas fa-burn"></i> Ghee</a></li>
+            <li id="menu-item-345335" class="menu-item"><a href="https://gramiyum.in/product-category/health-care/"><i class="fas fa-heartbeat"></i> Health Care</a></li>
+            <li id="menu-item-345323" class="menu-item"><a href="https://gramiyum.in/product-category/home-care/"><i class="fas fa-home"></i> Home Care</a></li>
+            <li id="menu-item-345324" class="menu-item"><a href="https://gramiyum.in/product-category/masala-and-spices/"><i class="fas fa-pepper-hot"></i> Masala and Spices</a></li>
+            <li id="menu-item-345325" class="menu-item"><a href="https://gramiyum.in/product-category/masala-and-spices/podi-varities/"><i class="fas fa-cogs"></i> Podi Varieties</a></li>
+            <li id="menu-item-345326" class="menu-item"><a href="https://gramiyum.in/product-category/traditional-cookware/"><i class="fas fa-paw"></i> Natural Cookware</a></li>
+            <li id="menu-item-345327" class="menu-item"><a href="https://gramiyum.in/product-category/buy-millet-noodles-online/"><i class="fas fa-utensils"></i> Noodles – Millet</a></li>
+            <li id="menu-item-345328" class="menu-item"><a href="https://gramiyum.in/product-category/personal-care/"><i class="fas fa-user"></i> Personal Care</a></li>
+            <li id="menu-item-345329" class="menu-item"><a href="https://gramiyum.in/product-category/pickles/"><i class="fas fa-pepper-hot"></i> Pickles</a></li>
+            <li id="menu-item-345330" class="menu-item"><a href="https://gramiyum.in/product-category/millets/"><i class="fas fa-leaf"></i> Pulses and Millets</a></li>
+            <li id="menu-item-345331" class="menu-item"><a href="https://gramiyum.in/product-category/traditional-rice-varieties/"><i class="fas fa-rice"></i> Rice</a></li>
+            <li id="menu-item-345332" class="menu-item"><a href="https://gramiyum.in/product-category/herbal-soup-powders/"><i class="fas fa-bowl-food"></i> Soup Powder</a></li>
+            <li id="menu-item-345333" class="menu-item"><a href="https://gramiyum.in/product-category/speciality/"><i class="fas fa-crown"></i> Speciality</a></li>
+            <li id="menu-item-345334" class="menu-item"><a href="https://gramiyum.in/product-category/vathal-vadam/"><i class="fas fa-bread-slice"></i> Vathal / Vadam</a></li>
+        </ul>
+    </div>
+
+    <div id="mobile-menu-second-mmenu" class="menu-mobile-profile-menu-container">
+        <ul id="main-mobile-second-mmenu-wrapper" class="menu" data-id="mobile-profile-menu">
+            <li id="menu-item-345452" class="menu-item"><a href="https://gramiyum.in/my-account/"><i class="fas fa-user-circle"></i> My Account</a></li>
+            <li id="menu-item-345428" class="menu-item"><a href="https://gramiyum.in/my-account/woo-wallet/"><i class="fas fa-wallet"></i> My Wallet</a></li>
+            <li id="menu-item-372825" class="menu-item"><a href="https://gramiyum.in/contact-us/"><i class="fas fa-phone"></i> Contact Us</a></li>
+            <li id="menu-item-648" class="menu-item"><a href="https://el3.thembaydev.com/greenmart_fresh/wp-login.php?action=logout"><i class="fas fa-sign-out-alt"></i> LogOut</a></li>
+        </ul>
+    </div>
+</nav>
