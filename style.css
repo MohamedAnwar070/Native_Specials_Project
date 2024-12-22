@@ -289,6 +289,11 @@
 }
 
 /* View All button */
+.link-tag-remove{
+    text-decoration: none;
+    color: white ;
+
+}
 .view-all {
     display: flex;
     align-items: center;

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Page</title>
+  <link rel="stylesheet" href="shop-all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+   <!-- Navbar -->
+   <nav class="navbar">
+    <div class="logo">NATIVE-SPECIALS</div>
+    <div class="nav-icons">
+        <i class="fas fa-search icon" id="search-toggle"></i>
+        <i class="fas fa-bars icon" id="menu-toggle"></i>
+    </div>
+    <!-- Search Bar big screen-->
+    <div class="nav-links">
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search for products...">
+            <button class="search-btn"> <i class="fas fa-search"></i></button>
+        </div>
+        <div class="contact-number"><i class="fas fa-phone-alt"></i> +91 95001 29121</div>
+        <div class="account-links"><i class="fas fa-user-circle"></i>
+            <a href="/login-Register/login.html">Login</a> / <a href="/login-Register/register.html">Register</a>
+        </div>
+        <!-- cart details -->
+        <div class="cart-details">
+            <div class="cart-container">
+                <span class="cart-icon"><i class="fas fa-shopping-cart"></i></span>
+                <span>0 items - ₹0.00</span>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Second Navbar -->
+<nav class="second-navbar">
+<ul class="nav-menu">
+  <li><a href="/index.html">Home</a></li>
+  <li class="dropdown">
+    <a href="#" class="dropdown-toggle">Categories <span class="dropdown-icon">&#x25BC;</span></a>
+    <div class="dropdown-menu">
+      <div class="dropdown-column">
+        <a href="#">Rice</a>
+        <a href="#">Ghee</a>
+        <a href="#">Pulses and Millets</a>
+        <a href="#">Dried Nuts & Seeds</a>
+        <a href="#">Flour</a>
+      </div>
+      <div class="dropdown-column">
+        <a href="#">Podi Varieties</a>
+        <a href="#">Masala and Spices</a>
+        <a href="#">Pickles</a>
+        <a href="#">Vathal / Vadam</a>
+        <a href="#">Soup Powder</a>
+      </div>
+      <div class="dropdown-column">
+        <a href="#">Home Care</a>
+        <a href="#">Personal Care</a>
+        <a href="#">Natural Cookware</a>
+        <a href="#">Cold Pressed Oil</a>
+      </div>
+      <div class="dropdown-column">
+        <a href="#">Sweeteners</a>
+        <a href="#">Crunchy Snacks</a>
+        <a href="#">Noodles – Millet</a>
+        <a href="#">Speciality</a>
+        <a href="#">Combo Boxes</a>
+      </div>
+    </div>
+  </li>
+  
+  </li>
+  <li><a href="#">Cold Pressed Oils</a></li>
+  <li><a href="#">Combo Box</a></li>
+  <li class="recent-product dropdown">
+    <a href="#" class="dropdown-toggle">
+      Recent Viewed Product <span class="dropdown-icon">&#x25BC;</span>
+    </a>
+    <ul class="dropdown-menu right-dropdown">
+      <li><a href="#">Product 1</a></li>
+      <li><a href="#">Product 2</a></li>
+      <li><a href="#">Product 3</a></li>
+    </ul>
+  </li>
+  
+</nav>
+
+<!-- Search Bar small screen-->
+<div class="search-bar-container" id="search-bar">
+    <input type="text" placeholder="Search For..." id="search-input">
+    <i class="fas fa-times cancel-btn" id="cancel-search"></i>
+</div>
+
+<!-- Sidebar -->
+<div class="menu-sidebar" id="menu-sidebar">
+    <span class="close-btn" id="close-sidebar">&times;</span>
+    <!-- Sidebar Tabs -->
+    <div class="tabs">
+        <button class="tab-button active" id="categories-tab">Categories</button>
+        <button class="tab-button" id="profile-tab">Profile</button>
+    </div>
+    <!-- Sidebar Content -->
+    <div class="menu-content">
+        <div class="tab-content active" id="categories-content">
+            <ul>
+                <li>Cold Pressed Oils</li>
+                <li>Rice</li>
+                <li>Flour</li>
+                <li>Crunchy Snacks</li>
+                <li>Combo Boxes</li>
+            </ul>
+        </div>
+        <div class="tab-content" id="profile-content">
+            <ul>
+                <li>My Account</li>
+                <li>My Wallet</li>
+                <li>Contact Us</li>
+                <li>Logout</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Sidebar Footer -->
+    <div class="sidebar-footer">
+        <a href="#">WhatsApp</a>
+        <a href="#">Twitter</a>
+    </div>
+</div>
+
+<!-- navbar ends here -->
+
+  <!-- Shop Header -->
+  <section class="shop-header">
+    <h2>Shop</h2>
+    <div class="results-sort">
+      <p>Showing 1–12 of 234 results</p>
+      <div class="sort-container">
+        <select id="sort-options">
+          <option value="popularity">Sort by Popularity</option>
+          <option value="latest">Sort by Latest</option>
+          <option value="low-to-high">Sort by Price: Low to High</option>
+          <option value="high-to-low">Sort by Price: High to Low</option>
+        </select>
+        <button id="toggle-view">
+          <i class="fas fa-th-large active"></i> <!-- Grid View Icon -->
+          <i class="fas fa-list"></i> <!-- List View Icon -->
+        </button>
+      </div>
+    </div>
+  </section>
+
+<!-- Shop Layout -->
+<div class="shop-layout">
+  <!-- Product Categories -->
+  <section class="categories">
+    <h3>Product Categories</h3>
+    <ul>
+      <li><a href="/category/cane-sugar-jaggery">Cane Sugar / Jaggery</a></li>
+      <li><a href="/category/cold-pressed-oil">Cold Pressed Oil</a></li>
+      <li><a href="/category/combo-boxes">Combo Boxes</a></li>
+      <li><a href="/category/crunchy-snacks">Crunchy Snacks</a></li>
+      <li><a href="/category/daily-essentials">Daily Essentials</a></li>
+      <li><a href="/category/dried-nuts-seeds">Dried Nuts & Seeds</a></li>
+      <li><a href="/category/ghee">Ghee</a></li>
+      <li><a href="/category/health-care">Health Care</a></li>
+      <li><a href="/category/home-care">Home Care</a></li>
+      <li><a href="/category/masala-and-spices">Masala and Spices</a></li>
+      <li><a href="/category/podi-varities">Podi Varities</a></li>
+      <li><a href="/category/natural-cookware">Natural Cookware</a></li>
+      <li><a href="/category/noodles-millet">Noodles – Millet</a></li>
+      <li><a href="/category/personal-care">Personal Care</a></li>
+      <li><a href="/category/pickles">Pickles</a></li>
+      <li><a href="/category/pulses-and-millets">Pulses and Millets</a></li>
+      <li><a href="/category/rice">Rice</a></li>
+      <li><a href="/category/soup-powder">Soup Powder</a></li>
+      <li><a href="/category/speciality">Speciality</a></li>
+      <li><a href="/category/vathal-vadam">Vathal / Vadam</a></li>
+    </ul>
+  </section>
+
+  <!-- Product Grid -->
+  <section id="product-grid" class="products grid-view">
+    <!-- Example Product Items -->
+    <div class="product" data-price="120">
+      <img src="https://via.placeholder.com/100" alt="Product">
+      <div class="product-details">
+        <h3>Nattu Sakkarai - Cane Jaggery Powder</h3>
+        <p class="price">₹334</p>
+        <button class="btn">Select Options</button>
+      </div>
+    </div>
+    <div class="product" data-price="120">
+      <img src="https://via.placeholder.com/100" alt="Product">
+      <div class="product-details">
+        <h3>Nattu Sakkarai - Cane Jaggery Powder</h3>
+        <p class="price">₹334</p>
+        <button class="btn">Select Options</button>
+      </div>
+    </div>
+    <div class="product" data-price="120">
+      <img src="https://via.placeholder.com/100" alt="Product">
+      <div class="product-details">
+        <h3>Nattu Sakkarai - Cane Jaggery Powder</h3>
+        <p class="price">₹334</p>
+        <button class="btn">Select Options</button>
+      </div>
+    </div>
+    <div class="product" data-price="120">
+      <img src="https://via.placeholder.com/100" alt="Product">
+      <div class="product-details">
+        <h3>Nattu Sakkarai - Cane Jaggery Powder</h3>
+        <p class="price">₹334</p>
+        <button class="btn">Select Options</button>
+      </div>
+    </div>
+    <div class="product" data-price="120">
+      <img src="https://via.placeholder.com/100" alt="Product">
+      <div class="product-details">
+        <h3>Nattu Sakkarai - Cane Jaggery Powder</h3>
+        <p class="price">₹334</p>
+        <button class="btn">Select Options</button>
+      </div>
+    </div>
+    <div class="product" data-price="250">
+      <img src="https://via.placeholder.com/100" alt="Product">
+      <div class="product-details">
+        <h3>Groundnut Oil (Cold Pressed)</h3>
+        <p class="price">₹92</p>
+        <button class="btn">Select Options</button>
+      </div>
+    </div>
+    <div class="product" data-price="120">
+      <img src="https://via.placeholder.com/100" alt="Product">
+      <div class="product-details">
+        <h3>Nattu Sakkarai - Cane Jaggery Powder</h3>
+        <p class="price">₹22</p>
+        <button class="btn">Select Options</button>
+      </div>
+    </div>
+    <div class="product" data-price="120">
+      <img src="https://via.placeholder.com/100" alt="Product">
+      <div class="product-details">
+        <h3>Nattu Sakkarai - Cane Jaggery Powder</h3>
+        <p class="price">₹922</p>
+        <button class="btn">Select Options</button>
+      </div>
+    </div>
+    <div class="product" data-price="120">
+      <img src="https://via.placeholder.com/100" alt="Product">
+      <div class="product-details">
+        <h3>Nattu Sakkarai - Cane Jaggery Powder</h3>
+        <p class="price">₹2312</p>
+        <button class="btn">Select Options</button>
+      </div>
+    </div>
+    <div class="product" data-price="120">
+      <img src="https://via.placeholder.com/100" alt="Product">
+      <div class="product-details">
+        <h3>Nattu Sakkarai - Cane Jaggery Powder</h3>
+        <p class="price">₹722</p>
+        <button class="btn">Select Options</button>
+      </div>
+    </div>
+    <div class="product" data-price="120">
+      <img src="https://via.placeholder.com/100" alt="Product">
+      <div class="product-details">
+        <h3>Nattu Sakkarai - Cane Jaggery Powder</h3>
+        <p class="price">₹2222</p>
+        <button class="btn">Select Options</button>
+      </div>
+    </div>
+    <div class="product" data-price="120">
+      <img src="https://via.placeholder.com/100" alt="Product">
+      <div class="product-details">
+        <h3>Nattu Sakkarai - Cane Jaggery Powder</h3>
+        <p class="price">₹1000</p>
+        <button class="btn">Select Options</button>
+      </div>
+    </div>
+    <div class="product" data-price="120">
+      <img src="https://via.placeholder.com/100" alt="Product">
+      <div class="product-details">
+        <h3>Nattu Sakkarai - Cane Jaggery Powder</h3>
+        <p class="price">₹334</p>
+        <button class="btn">Select Options</button>
+      </div>
+    </div>
+    <div class="product" data-price="120">
+      <img src="https://via.placeholder.com/100" alt="Product">
+      <div class="product-details">
+        <h3>Nattu Sakkarai - Cane Jaggery Powder</h3>
+        <p class="price">₹334</p>
+        <button class="btn">Select Options</button>
+      </div>
+    </div>
+    <div class="product" data-price="150">
+      <img src="https://via.placeholder.com/100" alt="Product">
+      <div class="product-details">
+        <h3>Groundnut Oil (Cold Pressed)</h3>
+        <p class="price">₹92</p>
+        <button class="btn">Select Options</button>
+      </div>
+    </div>
+    <div class="product" data-price="180">
+      <img src="https://via.placeholder.com/100" alt="Product">
+      <div class="product-details">
+        <h3>Organic Rice</h3>
+        <p class="price">₹500</p>
+        <button class="btn">Select Options</button>
+      </div>
+    </div>
+    <div class="product" data-price="250">
+      <img src="https://via.placeholder.com/100" alt="Product">
+      <div class="product-details">
+        <h3>Cold Pressed Coconut Oil</h3>
+        <p class="price">₹240</p>
+        <button class="btn">Select Options</button>
+      </div>
+    </div>
+    <div class="product" data-price="300">
+      <img src="https://via.placeholder.com/100" alt="Product">
+      <div class="product-details">
+        <h3>Organic Tea Leaves</h3>
+        <p class="price">₹750</p>
+        <button class="btn">Select Options</button>
+      </div>
+    </div>
+    <div class="product" data-price="120">
+      <img src="https://via.placeholder.com/100" alt="Product">
+      <div class="product-details">
+        <h3>Turmeric Powder (Organic)</h3>
+        <p class="price">₹334</p>
+        <button class="btn">Select Options</button>
+      </div>
+    </div>
+    <div class="product" data-price="200">
+      <img src="https://via.placeholder.com/100" alt="Product">
+      <div class="product-details">
+        <h3>Organic Jaggery</h3>
+        <p class="price">₹1100</p>
+        <button class="btn">Select Options</button>
+      </div>
+    </div>
+    <div class="product" data-price="150">
+      <img src="https://via.placeholder.com/100" alt="Product">
+      <div class="product-details">
+        <h3>Honey (Raw & Organic)</h3>
+        <p class="price">₹750</p>
+        <button class="btn">Select Options</button>
+      </div>
+    </div>
+    <div class="product" data-price="120">
+      <img src="https://via.placeholder.com/100" alt="Product">
+      <div class="product-details">
+        <h3>Ghee (Organic Cow Ghee)</h3>
+        <p class="price">₹800</p>
+        <button class="btn">Select Options</button>
+      </div>
+    </div>
+    <div class="product" data-price="500">
+      <img src="https://via.placeholder.com/100" alt="Product">
+      <div class="product-details">
+        <h3>Almonds (Raw & Organic)</h3>
+        <p class="price">₹1500</p>
+        <button class="btn">Select Options</button>
+      </div>
+    </div>
+    <div class="product" data-price="220">
+      <img src="https://via.placeholder.com/100" alt="Product">
+      <div class="product-details">
+        <h3>Organic Raw Coffee Beans</h3>
+        <p class="price">₹1200</p>
+        <button class="btn">Select Options</button>
+      </div>
+    </div>
+    <div class="product" data-price="150">
+      <img src="https://via.placeholder.com/100" alt="Product">
+      <div class="product-details">
+        <h3>Organic Cinnamon Powder</h3>
+        <p class="price">₹200</p>
+        <button class="btn">Select Options</button>
+      </div>
+    </div>    
+  </section>
+</div>
+  
+  <!-- Pagination -->
+  <div class="pagination">
+    <button id="prev-page">Prev</button>
+    <span id="page-info">Page 1 of 9</span> <!-- Dynamically updated -->
+    <button id="next-page">Next</button>
+  </div> 
+
+  <!-- Price Filter -->
+  <section class="filter">
+    <h3>Filter by Price</h3>
+    <div class="price-slider">
+      <input type="range" id="price-range" min="0" max="5000" value="5000">
+    </div>
+    <p id="price-display">Price: ₹0 - ₹5000</p>
+  </section>
+
+  <!-- Fixed Footer -->
+  <footer class="fixed-footer">
+    <div class="footer-item" onclick="navigateTo('home')">
+      <i class="fas fa-home"></i>
+      <span>Home</span>
+    </div>
+    <div class="footer-item" onclick="navigateTo('shop')">
+      <i class="fas fa-store"></i>
+      <span>Shop</span>
+    </div>
+    <div class="footer-item" onclick="navigateTo('cart')">
+      <i class="fas fa-shopping-cart"></i>
+      <span>Cart</span>
+      <span class="badge">0</span>
+    </div>
+    <div class="footer-item" onclick="navigateTo('viewed')">
+      <i class="fas fa-history"></i>
+      <span>Viewed</span>
+    </div>
+    <div class="footer-item" onclick="navigateTo('account')">
+      <i class="fas fa-user"></i>
+      <span>Account</span>
+    </div>
+  </footer>
+
+  <script src="shop-all.js">
+  </script>
+</body>
+</html>
